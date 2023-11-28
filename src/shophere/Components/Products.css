@@ -1,0 +1,9 @@
+.prod-cont{
+    margin: 2rem 0;
+}
+.cards{
+    transition: all 0.3s;
+}
+.cards:hover{
+    transform:scale(1.1)
+}
