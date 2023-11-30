@@ -1,9 +1,12 @@
-import React from "react";
+import React , { useState } from "react";
 import { Link } from "react-router-dom";
- import { Navbar, Container,Form,FormControl,Button } from "react-bootstrap";
+
+import { Navbar, Container,Form,FormControl,Button } from "react-bootstrap";
 // import Home from "../Components/Home";
 
 class Nav extends React.Component{
+
+    const [search,setSearch] = useState('');
 
     render() {
         return <div>
@@ -15,7 +18,8 @@ class Nav extends React.Component{
                         <div className="collapse navbar-collapse" id="navbarText">           
                             <ul className="navbar-nav ml-auto">
                                 <form className="form-inline">
-                                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" 
+                                    onChange={(e)=>setSearch(e.target.value)}/>
                                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                                 </form>
                                 <li><Link to="Home" className="nav-link">Home</Link></li>
