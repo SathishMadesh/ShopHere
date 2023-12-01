@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "./shophere/Navbar/Nav";
+import AppNavbar from "./shophere/Navbar/Nav";
 import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 
 import Home from "./shophere/Components/Home";
@@ -13,7 +13,7 @@ class App extends React.Component{
     render(){
         return <div>
             <Router>
-                <Nav />
+                <AppNavbar />
                 <Routes>
                     <Route path='Home' element={<Home/>}/>
                     <Route path='Products' element={<Products/>}/>
@@ -22,8 +22,6 @@ class App extends React.Component{
                     <Route path='Contact' element={<Contact/>}/>
                 </Routes>
             </Router>
-            <Home />
-            <Products />
         </div>
     }
 }
